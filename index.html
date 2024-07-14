@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <title>Document</title>
+
+    <style>
+        *, body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+        }
+
+        a,
+        a:active,a:focus,
+        a:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+        .image{
+            display: grid;
+            background-color: black;
+        }
+        .grid-2{grid-template-columns: auto auto;}
+        .image img{height: auto; width: 35vw;}
+        .messages{position: relative;}
+        span.border-bottom::after{
+          content:" ";
+          bottom:-1px;
+          left:10px;
+          width:55px;
+          position:absolute;
+          border-bottom: 1px solid white;
+        }
+
+        .color-b-grad{
+              border-bottom: 1px solid #002eff;
+          background-image: linear-gradient(
+          0deg,
+          hsl(231deg 65% 35%) 0%,
+          hsl(234deg 59% 34%) 9%,
+          hsl(236deg 53% 32%) 18%,
+          hsl(238deg 48% 30%) 27%,
+          hsl(240deg 43% 28%) 36%,
+          hsl(242deg 40% 26%) 45%,
+          hsl(243deg 36% 23%) 55%,
+          hsl(245deg 32% 21%) 64%,
+          hsl(247deg 27% 18%) 73%,
+          hsl(249deg 20% 16%) 82%,
+          hsl(251deg 12% 14%) 91%,
+          hsl(0deg 0% 11%) 100%
+        );
+
+        }
+        @media (max-width: 400px) {
+            .image {margin: 10px 0px;}
+            .image img{height: auto; width: 5rem !important;}
+        }
+
+        @font-face{
+          font-family: 'Grotesk-bold';
+          font-style: bold;
+          font-weight: bold;
+          src: url("./fonts/Typo\ Grotesk\ Bold\ Demo.otf");
+        }
+        @font-face{
+          font-family: 'Grotesk-Normal';
+          font-style: normal;
+          font-weight: normal;
+          src: url("./fonts/Typo-Grotesk-Thin.otf");
+        }
+        
+        @font-face{
+          font-family: 'Ardali-Antikor-Mono-Light';
+          font-style: normal;
+          font-weight: normal;
+          src: url("./fonts/Ardali-Antikor-Mono-Light-1.ttf");
+        }
+        nav, p, span, .buttons{font-family: 'Ardali-Antikor-Mono-Light'; line-height: normal;}
+        h1{font-family: 'Grotesk-bold';}
+        .tickets{font-size: 8px;}
+        .font-style{font-family: 'Grotesk-Normal';}
+        
+    </style>
+</head>
+<body class="bg-black">
+  <nav class="grid grid-2 border-b border-gray-300 border-opacity-75 text-sm">
+    <div class="links text-white py-4">
+      <ul class="flex flex-row justify-evenly gap-3">
+        <li class="list-none">
+          <a href="#">[ / ]</a>
+        </li>
+        <li class="list-none">
+          <a href="#">About</a>
+        </li>
+        <li class="list-none">
+          <a href="#">Pricing</a>
+        </li>
+        <li class="list-none">
+          <a href="#">Company</a>
+        </li>
+        <li class="list-none">
+          <a href="#">Documentation</a>
+        </li>
+        <li class="list-none">
+          <a href="#">Marketplace</a>
+        </li>
+        <li class="list-none">
+          <a href="#">News</a>
+        </li>
+        <li class="list-none">
+          <a href="#">Invest</a>
+        </li>
+      </ul>
+    </div>
+    <div class="buttons flex justify-end">
+      <button class="pl-5 pr-24 py-4  tracking-wide text-white  bg-[#2f3032] hover:bg-gray-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-30"> Login </button>
+      <button class="pl-5 pr-24 py-4  tracking-wide text-white  bg-[#163ff8] hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-30"> Sign Up </button>
+    </div>
+  </nav>
+  <div class="main grid grid-cols-2 bg-black">
+    <div class="pr-4">
+      <div class="grid1 pl-24 pt-14">
+        <div class="text-container">
+          <h1 class="text-white text-7xl font-black"> Enhance Support <br /> with the world's <br /> first DevCRM </h1>
+          <p class="text-[#8c8c8c] mt-6"> Empower your entire Organization to Connect <br /> with customers and transform their feedback <br /> into exceptional experiences </p>
+        </div>
+        <div class="buttons mt-6">
+          <button class="pl-5 pr-5 py-3 font-bold text-sm tracking-wide text-white  bg-[#163ff8] hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"> Get started </button>
+          <button class="pl-5 pr-5 py-3 font-bold text-sm tracking-wide text-black bg-[#ffffff] hover:text-white hover:bg-[#2f3032] focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"> Learn More </button>
+        </div>
+      </div>
+      <div class="image-container mt-11">
+        <span class="pl-24 text-[#8c8c8c] mt-6 text-xs">Endorsed by the greatest</span>
+        <div class="image pl-24 pb-10">
+          <img src="img/company-logo-set.JPG" class="border-t border-gray-300 border-opacity-75 mt-2" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="main-right1 grid grid-cols-2">
+      <div class="grid1 mt-44 bg-black ">
+        <div class="header flex flex-row gap-4">
+          <div class="tickets bg-[#292929] flex flex-row items-center gap-20 px-3 py-2 rounded-md">
+            <span class="text-white bg-[#353535] px-2 py-1.5 rounded-3xl font-style" style="font-size: 8px;">Tickets</span>
+            <p class="text-white" style="font-size: 8px;">237</p>
+          </div>
+          <div class="tickets bg-[#292929] flex flex-row items-center gap-16 pl-2 pr-6 py-2 rounded-md">
+            <span class="text-white bg-[#353535] px-2 py-1.5 rounded-3xl font-style" style="font-size: 8px;">All Issues</span>
+          </div>
+        </div>
+        <div class="header mt-4 bg-[#212121] rounded-tl-md pb-2">
+          <div class="tickets  flex flex-row items-center gap-4 pl-3 pr-24 py-2 ">
+            <p>
+              <svg fill="#8c8c8c" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13px" height="13px" viewBox="0 0 400.004 400.004" xml:space="preserve">
+                <g>
+                  <path d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757
+                      c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072
+                      c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315
+                      C400.004,190.438,392.251,182.686,382.688,182.686z" />
+                </g>
+              </svg>
+            </p>
+            <img src="img/avatar1.JPG" class="w-8" alt="" />
+            <span class="text-white font-style" style="font-size: 8px;">Calvin Sateward</span>
+          </div>
+          <div class="messages py-2 bg-[#292929] pl-3 pr-24 border-b border-t border-gray-300 border-opacity-25">
+            <span class="text-white py-2 border-bottom" style="font-size: 8px;">Messages</span>
+            <span class="text-gray-500 pl-5 py-2" style="font-size: 8px;">Tickets</span>
+          </div>
+          <div class="ticket text-right py-2">
+            <span style="font-size: 8px;" class="text-gray-500">Ticket has beeb created</span>
+          </div>
+          <div class="message-box bg-[#292929] mx-2 mb-2 px-3 py-2 rounded-md">
+            <p class="text-white" style="font-size: 8px;">First report of the issue. Ticket created for <br />tracking. Please view here for details </p>
+          </div>
+          <div class="message-box bg-[#292929] mx-2 mb-2 px-3 py-2 rounded-md">
+            <p class="text-white" style="font-size: 8px;">You will recive updates regarding the <br> progress and status through this <br> conversation. You can also view this info <br> from the corresponding ticket at any time. </p>
+          </div>
+          <div class="tkt ml-2 mb-2 border-l border-gray-500 flex flex-col">
+            <span class="text-gray-500 ml-2" style="font-size: 8px; font-weight: 900;">TKT-176</span>
+            <p class="text-white ml-2 py-2" style="font-size: 8px;">The part page is malfunctioning.</p>
+            <p class="ml-2 text-white bg-[#353535] px-2 py-1.5" style="font-size: 8px; width: 85px;">View Details</p>
+          </div>
+          <div class="ticket text-right py-2">
+            <span style="font-size: 8px;" class="text-gray-500">Okay, Thanks.</span>
+          </div>
+          <div class="message-box bg-[#292929] mx-2 mb-2 px-3 py-2 rounded-md">
+            <p class="text-white" style="font-size: 8px;">You will recive updates regarding the <br> progress and status through this <br> conversation. You can also view this info <br> from the corresponding ticket at any time. </p>
+          </div>
+          <div class="meeting bg-[#292929] mx-2 px-3 b-2 pb-4 flex flex-col justify-center items-center gap-2">
+            <img src="img/avatar1.JPG" class="w-8 my-2" alt="" />
+            <p class="text-white" style="font-size: 8px;">Meeting with Calvin Steward</p>
+            <hr class="w-full border-gray-400" />
+            <div class="color bg-[#3c3c3c] flex flex-row py-1 items-center w-full gap-2 text-center justify-center">
+              <img src="meeting-icon.JPG" alt="" style="width: 24px;" />
+              <p class="text-white" style="font-size: 8px;">Join Meeting</p>
+            </div>
+            <p class="text-white" style="font-size: 8px;">Decline</p>
+          </div>
+        </div>
+        <div class="reply flex flex-row border-t mb-2 border-gray-400 rounded-bl-md py-2 px-2 gap-2 items-center bg-[#1c1c1c]">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#3c3c3c" width="16" height="16" viewBox="0 0 24 24">
+            <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.507 13.941c-1.512 1.195-3.174 1.931-5.506 1.931-2.334 0-3.996-.736-5.508-1.931l-.493.493c1.127 1.72 3.2 3.566 6.001 3.566 2.8 0 4.872-1.846 5.999-3.566l-.493-.493zm-9.007-5.941c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5zm7 0c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5z" />
+          </svg>
+          <p class="text-[#3c3c3c]" style="font-size: 8px;">Write a reply...</p>
+        </div>
+      </div>
+      <div class="grid2 pr-4 relative pb-3" style="box-shadow: -30px 34px 22px 17px #000000;">
+        <div class="main-right2 px-2">
+          <div class="head-text my-4">
+            <p class="text-[#8c8c8c] text-xs font-bold">Automated processes marketplace</p>
+          </div>
+          <div class="email bg-[#1d1d1d] rounded-md">
+            <div class="flex flex-row justify-between items-center pr-3 py-2">
+              <img src="img/mail-icon.png" alt="" style="width: 4rem;" />
+              <span class="text-white bg-[#181818] px-2 py-1.5 rounded font-style" style="font-size: 8px;">5 Services</span>
+            </div>
+            <div class="text-content text-white px-4 pb-3">
+              <h6 class="my-2">Email</h6>
+              <p class="text-[#8c8c8c] text-xs"> Facilitate customer communication <br />regardless of location. </p>
+            </div>
+          </div>
+          <div class="slack bg-[#1d1d1d] rounded-md my-3">
+            <div class="flex flex-row justify-between items-center pr-3 py-2">
+              <img src="img/slack-icon.png" alt="" style="width: 4rem;" />
+              <span class="text-white bg-[#181818] px-2 py-1.5 rounded font-style" style="font-size: 8px;">3 Services</span>
+            </div>
+            <div class="text-content text-white px-4 pb-3">
+              <h6 class="my-2">Slack</h6>
+              <p class="text-[#8c8c8c] text-xs pr-4"> Expand your customer support through Slack. Synchronize real-time communication both ways with Slack and streamline your operations. </p>
+            </div>
+          </div>
+          <div class="apps bg-[#1d1d1d] color-b-grad px-4 pt-2">
+            <div class="flex flex-row justify-between items-center pr-1 py-2 text-white ">
+              <p class="text-xs">27 more apps</p>
+              <p>&gt;</p>
+            </div>
+          </div>
+          <div class="head-text my-4">
+            <p class="text-[#8c8c8c] text-xs font-bold">Instant customer interactions across apps</p>
+          </div>
+          <div class="email bg-[#1d1d1d] rounded-md px-4 flex flex-col">
+            <div class="pr-3 pt-2 flex flex-row items-center">
+              <p class="text-[#8c8c8c] text-xs">Support /</p>
+              <p class="text-white text-xs"> Inbox&nbsp;</p>
+              <span class="text-white text-xs text-center bg-[#163ff8]" style="border-radius: 50% ; height: 22px;  width: 22px; padding: 5px;" style="text-align: center;"> 3 </span>
+            </div>
+            <img src="img/menu1.JPG" style="width: 16vw;" class="my-2" alt="">
+            <div class="flex flex-row justify-between items-center pr-3 py-3  border-t border-b" style="    margin: 7px 0px;">
+              <div class="profile flex flex-col">
+                <div class="flex flex-row items-center">
+                  <img src="./img/avatar1.JPG" alt="" style="width: 40px;">
+                  <div class="text pl-2">
+                    <p class="text-white text-xs">Nathan Cooper</p>
+                    <p class="text-[#8c8c8c] text-xs">Global Corporation</p>
+                  </div>
+                </div>
+                <p class="text-[#8c8c8c] text-xs mt-2">Me: I hope it goes well.</p>
+              </div>
+              <span class="text-white bg-[#181818] px-2 py-1.5 rounded font-style" style="font-size: 8px;">Slack</span>
+            </div>
+            <div class="flex flex-row justify-between items-center pr-3 py-2 border-b">
+              <div class="profile flex flex-col">
+                <div class="flex flex-row items-center">
+                  <img src="./img/avatar1.JPG" alt="" style="width: 40px;">
+                  <div class="text pl-2">
+                    <p class="text-white text-xs">Nathan Cooper</p>
+                    <p class="text-[#8c8c8c] text-xs">Global Corporation</p>
+                  </div>
+                </div>
+                <p class="text-[#8c8c8c] text-xs mt-2">Me: I hope it goes well.</p>
+              </div>
+              <span class="text-white bg-[#181818] px-2 py-1.5 rounded font-style" style="font-size: 8px;">Slack</span>
+            </div>
+            <div class="flex flex-row justify-between items-center pr-3 py-2 " style="margin: 7px 0px;">
+              <div class="profile flex flex-col">
+                <div class="flex flex-row items-center">
+                  <img src="./img/avatar1.JPG" alt="" style="width:40px;">
+                  <div class="text pl-2">
+                    <p class="text-white text-xs">Nathan Cooper</p>
+                    <p class="text-[#8c8c8c] text-xs">Global Corporation</p>
+                  </div>
+                </div>
+                <p class="text-[#8c8c8c] text-xs mt-2">Me: I hope it goes well.</p>
+              </div>
+              <span class="text-white bg-[#181818] px-2 py-1.5 rounded font-style" style="font-size: 8px;">Slack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
